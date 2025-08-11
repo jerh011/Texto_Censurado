@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0d0d0d; /* negro grisáceo */
+  color: #e0e0e0;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #4da6ff; /* azul suave */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.containers {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.derechaizquierda {
+  background-color: #1a1a1a; /* gris muy oscuro */
+  padding: 20px;
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #333; /* borde sutil */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.derechaizquierda h2 {
+  color: #66b2ff; /* azul tenue */
+  font-size: 1.2rem;
+}
+
+.derechaizquierda textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #0d0d0d; /* fondo oscuro */
+  color: #e0e0e0;
+  font-size: 1rem;
+  resize: vertical; /* permitir cambiar tamaño vertical */
+}
+
+.derechaizquierda textarea:focus {
+  outline: none;
+  border-color: #4da6ff; /* borde azul en focus */
+}
