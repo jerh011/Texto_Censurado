@@ -5,7 +5,12 @@ CREATE TABLE groserias (
     palabra VARCHAR(100) NOT NULL,
     idioma VARCHAR(20)
 );
-
+CREATE TABLE IF NOT EXISTS training_samples (
+    id SERIAL PRIMARY KEY,
+    texto TEXT NOT NULL,
+    label INTEGER NOT NULL CHECK (label IN (0,1)),
+    created_at TIMESTAMP DEFAULT NOW()
+);
 DROP TABLE IF EXISTS groserias CASCADE;
 SELECT * from groserias;
 -- Insertar palabras en español
